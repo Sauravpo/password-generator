@@ -25,7 +25,7 @@ setIndicator("#ccc");
 function handleSlider() {
     inputSlider.value = passwordLength;
     lengthDisplay.innerText = passwordLength;
-    //or kuch bhi karna chahiye ? - HW
+
     const min = inputSlider.min;
     const max = inputSlider.max;
     inputSlider.style.backgroundSize = ( (passwordLength - min)*100/(max - min)) + "% 100%"
@@ -92,7 +92,7 @@ async function copyContent(){
     catch(e){
         copyMsg.innerText="failed";
     }
-    // to make copy wla span visible
+  
     copyMsg.classList.add("active");
     setTimeout(()=>{
             copyMsg.classList.remove("active");
@@ -120,7 +120,7 @@ function handleCheckBoxChange(){
         }
     });
 
-    // specialcase
+  
     if(passwordLength<checkCount){
         passwordLength=checkCount;
         handleSlider();
@@ -150,7 +150,7 @@ generateBtn.addEventListener('click',()=>{
             passwordLength=checkCount;
             handleSlider();
         }
-        // lets start the journey to find new password
+       
         // remove old pasword
         password="";
         let funcArr=[];
